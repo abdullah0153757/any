@@ -5,23 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Javascript</title>
     <style>
-        body{
-            background-color: aquamarine;
+        article{
+            border: 2px solid tomato;
+            border-radius: 24px;
+            margin: 5px;
+            padding: 5px;
         }
-
     </style>
     
 </head>
 <body>
-    <h1>Hello Javascript</h1>
+   <main>
+    <section>
+        <h3>Exploring DOM</h3>
+        <article>
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores explicabo enim sed quidem dolorum fuga quas labore tempora laboriosam alias ullam, neque reprehenderit sit fugiat minus quam cum saepe?</p>
+        </article>
+        <article>
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Possimus cupiditate accusantium dicta voluptas? Obcaecati minus perferendis odio at, exercitationem ab rerum culpa quas iure optio repellendus debitis impedit mollitia nesciunt ducimus est nihil labore, delectus placeat animi rem.</p>
+        </article>
+        <article>
+            <h3>article-3</h3>
+            <p class="author">author-3</p>
+            <p class="description">Iste vitae repudiandae possimus, cupiditate explicabo molestias error omnis voluptatem, earum voluptates facilis atque, nulla deleniti illo corrupti iusto quidem. Nobis reprehenderit et quisquam? Debitis natus animi consequuntur sit minus!</p>
+        </article>
+    </section>
+   </main>
 
-
-
-    <script>
-        console.log(45);
-       
-    </script>
-<script src="second.js"></script>
-<script src="script.js"></script>
+   <script>
+    var authors = document.getElementsByClassName('author');
+    for(var i = 0; i < authors.length; i++){
+        var element = authors[i];
+        console.log(element.innerHTML);
+        element.innerHTML = 'Lekhok-' + (i + 1);
+        
+        element.style.backgroundColor = 'lightblue';
+        element.style.margin = '10px';
+        element.style.padding = '5px';
+        element.style.fontSize = '20px';
+        element.style.color = 'red';
+        
+        
+    }
+    
+    
+   </script>
 </body>
 </html>
