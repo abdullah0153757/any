@@ -13,7 +13,7 @@
         }
 
         .special h3{
-            
+
         }
     </style>
     
@@ -22,7 +22,7 @@
    <main>
     <section>
         <h3>Exploring DOM</h3>
-        <article>
+        <article id="sum">
             <h3>article-1</h3>
             <p class="author">author-1</p>
             <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam maiores explicabo enim sed quidem dolorum fuga quas labore tempora laboriosam alias ullam, neque reprehenderit sit fugiat minus quam cum saepe?</p>
@@ -41,10 +41,12 @@
    </main>
 
    <script>
-    var authors = document.getElementsByClassName('author');
+        document.body.style.backgroundColor = 'tomato';
+
+    var authors = document.querySelectorAll('.special h3')
     for(var i = 0; i < authors.length; i++){
         var element = authors[i];
-        console.log(element.innerHTML);
+        // console.log(element.innerHTML);
         element.innerHTML = 'Lekhok-' + (i + 1);
         
         element.style.backgroundColor = 'lightblue';
@@ -52,6 +54,7 @@
         element.style.padding = '5px';
         element.style.fontSize = '20px';
         element.style.color = 'red';
+      
         
         
     }
